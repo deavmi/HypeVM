@@ -1,0 +1,4 @@
+namespace HypeVM.VM.Devices
+{
+    
+}
