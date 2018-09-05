@@ -1,5 +1,8 @@
 namespace HypeVM.VM.Devices
 {
+
+    using System;
+
     //Manages the devices
     public sealed class DeviceManager
     {
@@ -15,14 +18,15 @@ namespace HypeVM.VM.Devices
         }
 
         //Returns the number of devices
-        public //TODO: as well
+        //public //TODO: as well
 
         //Executes the `poll()` method on each device
         public void pollDevices()
         {
             foreach(Device device in devices)
             {
-                Console.Out.WriteLine("DevicePoll[ID: "+devices)
+                //TODO: devices.lentgh or what? oh indexof
+                Console.Out.WriteLine("DevicePoll[ID: "+devices);
                 device.poll();
             }
         }

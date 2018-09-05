@@ -1,7 +1,7 @@
 namespace HypeVM.VM.Devices
 {
     //Represents a device that can be attatched to the machine
-    public class Device
+    public abstract class Device
     {
         //Information about the device (name, description)
         private DeviceInfo deviceInfo;
