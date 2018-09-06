@@ -1,4 +1,4 @@
-namespace HypeVM.Plugins.PCSpeaker
+namespace HypeVM.Plugins.Devices.PCSpeaker
  {
 
     using VM.Devices;

@@ -33,7 +33,7 @@ namespace HypeVM
             DeviceManager deviceManager = new DeviceManager(null);
 
             //Create a new VM
-            VM.VM vm = new VM.VM(null, new VM.Memory.Memory(32767), null); //TODO: Remove null
+            VM.VM vm = new VM.VM(null, new VM.Memory.Memory(32767), deviceManager); //TODO: Remove null
 
             VM.Utils.Utils.memTest(vm);
             // while(true)

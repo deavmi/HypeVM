@@ -13,7 +13,7 @@
      public sealed class Executor
      {
 
-        //Execute a machine cycke
+        //Execute a machine cycle on the given machine
         public static void cycle(VM vm)
         {
             //Output information (TODO: Finish me)
