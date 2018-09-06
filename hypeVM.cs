@@ -15,6 +15,11 @@ namespace HypeVM
         {
             Console.Out.WriteLine("Welcome to hypeVM!");
 
+            //TODO: Implement me
+            //Load the configuration of the virtual machine
+            Configuration.loadConfig();
+            Configuration.fff();
+
             //Check whether or not we need to run tests, if so run them
             if(testsEnabled)
             {
