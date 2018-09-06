@@ -27,7 +27,7 @@ namespace HypeVM.VM
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[VM]: New machine being initialized...");
 
-            //Set the bytecode to be run on this machine
+            //Set the bytecode to be run on this machine (TODO: move this to a non-static initialization block)
             Utils.Init.bootMachine(this, bytecode);
 
             //Set this machine's memory
@@ -38,6 +38,27 @@ namespace HypeVM.VM
 
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[VM]: Created new virtual machine.");
+        }
+
+        //Begin running of code
+        public void beginRun()
+        {
+            //Output information (TODO: Finish me)
+            Console.Out.WriteLine("[VM]: Code running begin");
+
+            //Code loop here
+            while(true)
+            {
+                //TODO: implement me
+
+                //Execute a machine cycle
+                Executor.cycle(this);
+                
+                break;
+            }
+
+            //Output information (TODO: Finish me)
+            Console.Out.WriteLine("[VM]: Machine code run completed, now halted.");
         }
 
         //Returns this machine's registers

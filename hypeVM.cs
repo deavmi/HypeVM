@@ -40,6 +40,18 @@ namespace HypeVM
             // {
 
             // }
+
+
+
+
+
+            //Code below is run once all machine tests have finished
+
+            //Make the machine begin execution
+            Console.Out.WriteLine("Beginning execution of machine...");
+            vm.beginRun();
+            Console.Out.WriteLine("Machine execution finished");
+
         }
     }
 }
