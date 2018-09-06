@@ -7,6 +7,9 @@ HypeVM Specification
 
 ~Jaco Geldenhuys circa 1776
 
+## What is _HypeVM_?
+
+**HypeVM** is a project that aims at creating an implementation of a virtual machine for the HypeVM specification (described later in this document) with the added features of allowing the virtual machine to be distributed in terms of its various resources [mentioned here](DistributedVM.md).
 
 ## HypeVM Architecture
 
