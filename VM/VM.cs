@@ -53,12 +53,18 @@ namespace HypeVM.VM
 
                 //Execute a machine cycle
                 Executor.cycle(this);
-                
+
                 break;
             }
 
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[VM]: Machine code run completed, now halted.");
+        }
+
+        //Returns this machine's devices (device manager)
+        public DeviceManager getDeviceManager()
+        {
+            return deviceManager;
         }
 
         //Returns this machine's registers
