@@ -29,8 +29,11 @@ namespace HypeVM
         {
             //Testing
 
+            //Create an array of some devices
+            Device[] devices = new Device[]{new Plugins.Devices.NullDevice.NullDevice()};
+
             //Create a new DeviceManager for this machine (TODO: Remove null)
-            DeviceManager deviceManager = new DeviceManager(null);
+            DeviceManager deviceManager = new DeviceManager(devices);
 
             //Create a new VM
             VM.VM vm = new VM.VM(null, new VM.Memory.Memory(32767), deviceManager); //TODO: Remove null

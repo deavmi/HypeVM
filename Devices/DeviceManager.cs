@@ -30,12 +30,12 @@ namespace HypeVM.VM.Devices
             Console.Out.WriteLine("[DeviceManager]: Poll devices begin.");
 
             //Poll each device
-            // foreach(Device device in devices)
-            // {
-            //     //TODO: devices.lentgh or what? oh indexof
-            //     Console.Out.WriteLine("DevicePoll[ID: "+devices);
-            //     device.poll();
-            // }
+            foreach(Device device in devices)
+            {
+                //TODO: devices.lentgh or what? oh indexof
+                Console.Out.WriteLine("DevicePoll[ID: "+devices);
+                device.poll();
+            }
 
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[DeviceManager]: Poll devices end.");
