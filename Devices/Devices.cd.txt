@@ -1,4 +1,0 @@
-namespace HypeVM.VM.Devices
-{
-    
-}
