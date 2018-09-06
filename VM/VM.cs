@@ -24,6 +24,9 @@ namespace HypeVM.VM
         //and memory `Memory`
         public VM(Bytecode.Bytecode bytecode, Memory.Memory memory, DeviceManager deviceManager)
         {
+            //Output information (TODO: Finish me)
+            Console.Out.WriteLine("[VM]: New machine being initialized...");
+
             //Set the bytecode to be run on this machine
             Utils.Init.bootMachine(this, bytecode);
 
@@ -32,6 +35,9 @@ namespace HypeVM.VM
 
             //Set this machine's device manager
             this.deviceManager = deviceManager;
+
+            //Output information (TODO: Finish me)
+            Console.Out.WriteLine("[VM]: Created new virtual machine.");
         }
 
         //Returns this machine's registers
@@ -76,6 +82,12 @@ namespace HypeVM.VM
 
         //Holds the address of the intruction in memory currently being executed
         public short instructionPointer;
+
+        public RegisterState()
+        {
+            //Output information (TODO: Finish me)
+            Console.Out.WriteLine("[RegisterState]: Created new virtual machine register set.");
+        }
     }
 
 }

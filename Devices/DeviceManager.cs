@@ -15,6 +15,9 @@ namespace HypeVM.VM.Devices
         {
             //Add the given devices to the machine
             this.devices = devices;
+
+            //Output information (TODO: Finish me)
+            Console.Out.WriteLine("[DeviceManager]: Created new device manager with " + "" + " devices.");
         }
 
         //Returns the number of devices
