@@ -11,6 +11,8 @@ HypeVM Specification
 
 **HypeVM** is a project that aims at creating an implementation of a virtual machine for the HypeVM specification (described later in this document) with the added features of allowing the virtual machine to be distributed in terms of its various resources [mentioned here](DistributedVM.md).
 
+It aims to create a fully functional general purpose virtual machine architecture that can be used by anyone for anything.
+
 ## HypeVM Architecture
 
 The architecture of the HypeVM is as follows:
