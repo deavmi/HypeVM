@@ -54,6 +54,14 @@ TODO: Finish description of these
 1.  `ioStart`
 2. `ioEnd`
 
+##### Memory registers
+
+These registers are useful for determining information regarding the memory of the virtual machine. They are listed below.
+
+TODO: Finish description of these
+
+1.  `memSize`
+
 ### Devices
 
 Devices can be attatched to the machine to add extra (or much needed) functionality. A dedicated region of memory (an address space) is dedicated to all of the devices. The beginning and end addresses are stored in the special purpose registers `ioStart` and `ioEnd`.
