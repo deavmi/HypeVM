@@ -42,6 +42,15 @@ TODO: Finish description of these
 1.  `ioStart`
 2. `ioEnd`
 
+##### Informative registers
+
+These registers hold useful values related to the current configuration of the machine.
+
+TODO: Finish description of these
+
+1.  `memBegin`
+2.  `memEnd`
+
 ### Devices
 
 Devices can be attatched to the machine to add extra (or much needed) functionality. A dedicated region of memory (an address space) is dedicated to all of the devices. The beginning and end addresses are stored in the special purpose registers `ioStart` and `ioEnd`.

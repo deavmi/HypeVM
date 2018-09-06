@@ -5,6 +5,7 @@ namespace HypeVM.VM
 
     using Bytecode;
     using Memory;
+    using Devices;
 
     //Represents a virtual machine
     public sealed class VM
@@ -16,15 +17,21 @@ namespace HypeVM.VM
         //The machine's registers
         private RegisterState registers = new RegisterState();
 
+        //The device manager of this machine (holds the connected devices)
+        private DeviceManager deviceManager;
+
         //Create a new VM with the given program `bytecode`
         //and memory `Memory`
-        public VM(Bytecode.Bytecode bytecode, Memory.Memory memory)
+        public VM(Bytecode.Bytecode bytecode, Memory.Memory memory, DeviceManager deviceManager)
         {
             //Set the bytecode to be run on this machine
             Utils.Init.bootMachine(this, bytecode);
 
             //Set this machine's memory
             this.memory = memory;
+
+            //Set this machine's device manager
+            this.deviceManager = deviceManager;
         }
 
         //Returns this machine's registers

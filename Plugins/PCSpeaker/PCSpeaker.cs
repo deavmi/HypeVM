@@ -1,7 +1,7 @@
 namespace HypeVM.Plugins.PCSpeaker
  {
 
-     using VM.Devices;
+    using VM.Devices;
 
     //Re enable below for the error to revise
     //  //A PC speaker device (TODO: kak statci DeviceInfo maybe?)

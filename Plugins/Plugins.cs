@@ -8,6 +8,6 @@
  namespace HypeVM.Plugins
  {
 
-     //TODO: Add more devices
+    //TODO: Add more devices
 
  }

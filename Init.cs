@@ -2,6 +2,7 @@ namespace HypeVM.VM.Utils
 {
 
     using System;
+    
     public sealed class Init
     {
         public static void bootMachine(VM vm, Bytecode.Bytecode bytecode)
