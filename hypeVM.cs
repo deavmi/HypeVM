@@ -16,7 +16,9 @@ namespace HypeVM
             //Check whether or not we need to run tests, if so run them
             if(testsEnabled)
             {
+                Console.Out.WriteLine("Running tests...");
                 runTests();
+                Console.Out.WriteLine("All tests run.");
             }
         }
 
