@@ -27,6 +27,9 @@ namespace HypeVM.Plugins.Devices.NullDevice
          {
             //Do nothing but say hey!
             Console.Out.WriteLine("Hey I am a null device and I do fokol");
+
+            //Beep for the nibbas
+            Console.Beep(); //TODO: Fix me and not working too freq check short
          }
      }
 
