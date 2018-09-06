@@ -1,7 +1,7 @@
 Todo List
 =========
 
-* Make workspaces nice (starting with HypeVM)
+* Make namespaces spaces nice (starting with HypeVM)
 * Finsh machine internals
 * Implement basic memory and register functions tomorrow
 * Implement arithmetic functions
