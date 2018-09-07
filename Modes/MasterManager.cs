@@ -15,5 +15,11 @@ namespace HypeVM.Main
      {
 
      }
+
+     //Begin the Master node
+     public void run()
+     {
+         
+     }
  }
 }

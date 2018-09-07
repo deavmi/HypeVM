@@ -15,5 +15,11 @@ namespace HypeVM.Main
      {
 
      }
+
+     //Begin the Slave node
+     public void run()
+     {
+         
+     }
  }
 }
