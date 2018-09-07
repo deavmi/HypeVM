@@ -15,6 +15,37 @@ namespace HypeVM
         {
             Console.Out.WriteLine("Welcome to hypeVM!");
 
+
+            //TODO: Check whether this is a master or slave node
+            //Check whether any arguments were provided
+            if(args.Length > 0)
+            {
+                //Check what mode we are running in (master or slave)
+                if(args[0].Equals("master"))
+                {
+                    Console.Out.WriteLine("VM mode selected: master");
+                }
+                else if(args[0].Equals("slave"))
+                {
+
+                }
+                else
+                {
+                    Console.Out.WrietLine("Invalid mode \""+args[0]+"".Equals(""));
+                }
+
+            }
+            else
+            {
+                Console.Out.WriteLine("Error: No argument specified (master or slave?)")
+            }
+
+            //TODO: remove this from here
+            oldCode();
+        }
+
+        private static void oldCode()
+        {
             //TODO: Implement me
             //Load the configuration of the virtual machine
             Configuration.loadConfig();
