@@ -1,4 +1,4 @@
-namespace HypeVM
+namespace HypeVM.Main
 {
 
     using System;
@@ -11,29 +11,33 @@ namespace HypeVM
         //Whether or not to run tests
         private static bool testsEnabled = true;
 
+        //Start the hypeVM in a given mode
         public static void Main(string[] args)
         {
             Console.Out.WriteLine("Welcome to hypeVM!");
 
-
-            //TODO: Check whether this is a master or slave node
             //Check whether any arguments were provided
             if(args.Length > 0)
             {
                 //Check what mode we are running in (master or slave)
+
+                //If we are running in master mode
                 if(args[0].Equals("master"))
                 {
                     Console.Out.WriteLine("VM mode selected: master");
+                    MasterManager masterManager = new MasterManager(); //TODO : test
                 }
+                //If we are ruinning in slave mode
                 else if(args[0].Equals("slave"))
                 {
-
+                    Console.Out.WriteLine("VM mode selected: slave");
+                    SlaveManager slaveManager = new SlaveManager(); //TODO : test
                 }
+                //If the mode provided is not a mode actually
                 else
                 {
                     Console.Out.WrietLine("Invalid mode \""+args[0]+"".Equals(""));
                 }
-
             }
             else
             {
