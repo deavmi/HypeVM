@@ -9,3 +9,14 @@ C:\Users\Tristan B. Kildaire\Documents\CSharp\hypevm\bin\Debug\netcoreapp2.1\hyp
 C:\Users\Tristan B. Kildaire\Documents\CSharp\hypevm\bin\Debug\netcoreapp2.1\hypevm.pdb
 C:\Users\Tristan B. Kildaire\Documents\CSharp\hypevm\obj\Debug\netcoreapp2.1\hypevm.dll
 C:\Users\Tristan B. Kildaire\Documents\CSharp\hypevm\obj\Debug\netcoreapp2.1\hypevm.pdb
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\bin\Debug\netcoreapp2.1\hypevm.deps.json
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\bin\Debug\netcoreapp2.1\hypevm.runtimeconfig.json
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\bin\Debug\netcoreapp2.1\hypevm.runtimeconfig.dev.json
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\bin\Debug\netcoreapp2.1\hypevm.dll
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\bin\Debug\netcoreapp2.1\hypevm.pdb
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\obj\Debug\netcoreapp2.1\hypevm.csprojAssemblyReference.cache
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\obj\Debug\netcoreapp2.1\hypevm.csproj.CoreCompileInputs.cache
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\obj\Debug\netcoreapp2.1\hypevm.AssemblyInfoInputs.cache
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\obj\Debug\netcoreapp2.1\hypevm.AssemblyInfo.cs
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\obj\Debug\netcoreapp2.1\hypevm.dll
+C:\Users\Tristan B. Kildaire\Desktop\HypeVM\obj\Debug\netcoreapp2.1\hypevm.pdb
