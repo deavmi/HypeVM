@@ -21,9 +21,9 @@ This file would be saved as, for example, `machine.cfg` and you would boot the V
 These parameters describe the parameters for the virtual machine.
 
 1.  `ipBind`
-    * The IP address to bind to
+    * The IP address to bind to.
 2.  `portBind`
-    * The port to bind to (TCP)
+    * The port to bind to (TCP).
 3.  `enableRedundancy`
     * If set to true then the MemoryManager and RegisterManager will store duplicates of their respective states on nodes.
 4.  `initImage`

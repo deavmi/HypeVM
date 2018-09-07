@@ -21,7 +21,7 @@ namespace HypeVM.Main
         //Create a new master node
         public MasterManager(string configFilePath)
         {
-            Console.Out.WriteLine("[MasterManager] New master created with config file path: \"" + initImageFilePath + "\"");
+            Console.Out.WriteLine("[MasterManager] New master created with config file path: \"" + configFilePath + "\"");
             this.configFilePath = configFilePath;
         }
 
@@ -35,7 +35,8 @@ namespace HypeVM.Main
             //Read the configuration file
             //TODO: Implement file reading
             TextReader textReader = new TextReader(configFilePath);
-            textReader.getNextLine
+            //TODO: Implement the reading of lines
+            textReader.getNextLine();
             
 
             //Setup the relevant servers
