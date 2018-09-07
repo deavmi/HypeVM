@@ -17,6 +17,7 @@ namespace HypeVM.Main
         //The file stream
         private FileStream fileStream;
 
+        //Create a new TextReader
         public TextReader(string filePath)
         {
             fileStream = new FileStream(filePath, FileMode.Open);

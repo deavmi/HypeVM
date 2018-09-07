@@ -10,6 +10,8 @@ The first step to start the VM is to start `hypeVM` with an argument containing 
 ````
 ipBind
 portBind
+enableRedundancy
+initImage
 ````
 
 ### Virtual machine configuration
@@ -17,7 +19,9 @@ portBind
 These parameters describe the parameters for the virtual machine.
 
 1.  `ipBind`
+    * The IP address to bind to
 2.  `portBind`
+    * The port to bind to (TCP)
 3.  `enableRedundancy`
     * If set to true then the MemoryManager and RegisterManager will store duplicates of their respective states on nodes.
 4.  `initImage`
