@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tristan B. Kildaire\\Desktop\\HypeVM\\hypevm.csproj",
+      "projectUniqueName": "C:\\Users\\Tristan B. Kildaire\\Documents\\CSharp\\hypevm\\hypevm.csproj",
       "projectName": "hypevm",
-      "projectPath": "C:\\Users\\Tristan B. Kildaire\\Desktop\\HypeVM\\hypevm.csproj",
+      "projectPath": "C:\\Users\\Tristan B. Kildaire\\Documents\\CSharp\\hypevm\\hypevm.csproj",
       "packagesPath": "C:\\Users\\Tristan B. Kildaire\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tristan B. Kildaire\\Desktop\\HypeVM\\obj\\",
+      "outputPath": "C:\\Users\\Tristan B. Kildaire\\Documents\\CSharp\\hypevm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

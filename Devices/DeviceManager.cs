@@ -41,4 +41,6 @@ namespace HypeVM.VM.Devices
             Console.Out.WriteLine("[DeviceManager]: Poll devices end.");
         }
     }
+
+    //TODO: Setup a device server to listen for incoming connections for the device
 }
