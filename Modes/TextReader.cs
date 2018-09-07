@@ -20,7 +20,7 @@ namespace HypeVM.Main
         public TextReader(string filePath)
         {
             fileStream = new FileStream(filePath, FileMode.Open);
-        }
+        } 
 
         //Returns either a reference to a string object or null
         public string getNextLine()
