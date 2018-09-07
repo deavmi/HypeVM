@@ -7,9 +7,14 @@
 
  namespace HypeVM.Slave.Servers.MemoryServer
  {
-    //Creates a new SemoryServer bound to the given IP Address and Port (TCP)
-    public MemoryServer(stirng ipAddress, int port)
+
+
+    //Creates a new MemoryServer bound to the given IP Address and Port (TCP)
+    public class MemoryServer
     {
+        public MemoryServer(string ipAddress, int port)
+        {  
         
+        }   
     }
  }

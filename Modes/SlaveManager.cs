@@ -8,18 +8,20 @@
 
 namespace HypeVM.Main
 {
- public class SlaveManager
- {
-     //Create a new slave node
-     public SlaveManager()
-     {
+    using System;
 
-     }
+    public class SlaveManager
+    {
+        //Create a new slave node
+        public SlaveManager()
+        {
+            Console.Out.WriteLine("[SlaveManager] New slave created");
+        }
 
-     //Begin the Slave node
-     public void run()
-     {
-         
-     }
- }
+        //Begin the Slave node
+        public void run()
+        {
+            Console.Out.WriteLine("[MasterManager] New master created");
+        }
+    }
 }

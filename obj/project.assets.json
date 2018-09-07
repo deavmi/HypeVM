@@ -681,23 +681,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tristan B. Kildaire\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/deavmi/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tristan B. Kildaire\\Documents\\CSharp\\hypevm\\hypevm.csproj",
+      "projectUniqueName": "/home/deavmi/HypeVM/hypevm.csproj",
       "projectName": "hypevm",
-      "projectPath": "C:\\Users\\Tristan B. Kildaire\\Documents\\CSharp\\hypevm\\hypevm.csproj",
-      "packagesPath": "C:\\Users\\Tristan B. Kildaire\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tristan B. Kildaire\\Documents\\CSharp\\hypevm\\obj\\",
+      "projectPath": "/home/deavmi/HypeVM/hypevm.csproj",
+      "packagesPath": "/home/deavmi/.nuget/packages/",
+      "outputPath": "/home/deavmi/HypeVM/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tristan B. Kildaire\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/deavmi/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

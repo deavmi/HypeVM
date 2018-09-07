@@ -4,15 +4,15 @@ namespace HypeVM.VM
     using System;
 
     using Bytecode;
-    using Memory;
     using Devices;
+    using HypeVM.Slave.Servers.MemoryServer;
 
     //Represents a virtual machine
     public sealed class VM
     {
 
         //The machine's memory
-        private Memory.Memory memory;
+        private Memory memory;
 
         //The machine's registers
         private RegisterState registers = new RegisterState();
@@ -22,7 +22,7 @@ namespace HypeVM.VM
 
         //Create a new VM with the given program `bytecode`
         //and memory `Memory`
-        public VM(Bytecode.Bytecode bytecode, Memory.Memory memory, DeviceManager deviceManager)
+        public VM(Bytecode.Bytecode bytecode, Memory memory, DeviceManager deviceManager)
         {
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[VM]: New machine being initialized...");
@@ -74,7 +74,7 @@ namespace HypeVM.VM
         }
 
         //Returns this machine's memory
-        public Memory.Memory getMemory()
+        public Memory getMemory()
         {
             return memory;
         }

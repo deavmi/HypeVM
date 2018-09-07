@@ -2,7 +2,9 @@ namespace HypeVM.VM.Utils
 {
 
     using System;
-    
+
+    using HypeVM.Slave.Servers.MemoryServer;
+
     public sealed class Init
     {
         public static void bootMachine(VM vm, Bytecode.Bytecode bytecode)
@@ -24,7 +26,7 @@ namespace HypeVM.VM.Utils
         public static void memTest(VM vm)
         {
             //Run through the memory of the VM printing it all out
-            Memory.Memory memory = vm.getMemory();
+            Memory memory = vm.getMemory();
 
             for(short i = 0; i < memory.getSize(); i++)
             {
