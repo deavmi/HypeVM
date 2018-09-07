@@ -25,13 +25,23 @@ namespace HypeVM.Main
                 if(args[0].Equals("master"))
                 {
                     Console.Out.WriteLine("VM mode selected: master");
+
+                    //Create a new MasterManager that will kick off the execution of the respective code
                     MasterManager masterManager = new MasterManager(); //TODO : test
+
+                    //Start the respective code
+                    masterManager.run();
                 }
                 //If we are ruinning in slave mode
                 else if(args[0].Equals("slave"))
                 {
                     Console.Out.WriteLine("VM mode selected: slave");
+
+                    //Create a new SlaveManager that will kick off the execution of the respective code
                     SlaveManager slaveManager = new SlaveManager(); //TODO : test
+
+                    //Start the respective code
+                    slaveManager.run();
                 }
                 //If the mode provided is not a mode actually
                 else
