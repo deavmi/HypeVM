@@ -54,3 +54,7 @@ Once the configuration file has been loaded and all the parameters setup then th
     1.  **TODO:** The DeviceManager will be started and will wait for connections from device clients then connect to the specified memory servers.
 2.  Load initialization image
     * After the system is setup then the initialization process begins by loading the image into memory and setting the correct registers to the corresponding values. After this the machine cycles then begin.
+3. Machine cycles
+    * The machine cyle includes two main components.
+    * **First compoment:** Executes the VMs machine code.
+    * **Second component:** Polls each device one by one.
