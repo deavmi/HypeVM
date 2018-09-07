@@ -1,5 +1,5 @@
-Initializtation
-===============
+Initialization of the hypeVM for the master node
+================================================
 
 This document describes how the VM is initialized.
 
@@ -8,11 +8,13 @@ This document describes how the VM is initialized.
 The first step to start the VM is to start `hypeVM` with an argument containing the filename of the configuration file you would like to use. This file is described below.
 
 ````
-ipBind
-portBind
-enableRedundancy
-initImage
+ipBind=0.0.0.0
+portBind=3000
+enableRedundancy=false
+initImage=boot.img
 ````
+
+This file would be saved as, for example, `machine.cfg` and you would boot the VM with said configuration like this: `hypeVM master machine.cfg`
 
 ### Virtual machine configuration
 

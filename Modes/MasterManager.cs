@@ -34,6 +34,8 @@ namespace HypeVM.Main
 
             //Read the configuration file
             //TODO: Implement file reading
+            TextReader textReader = new TextReader(configFilePath);
+            textReader.getNextLine
             
 
             //Setup the relevant servers
