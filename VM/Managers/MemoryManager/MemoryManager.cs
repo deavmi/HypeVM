@@ -11,10 +11,10 @@
      //Manager for the virtual machine's memory
      public sealed class MemoryManager
      {
-        //Construct a new MemoryManager
+        //Construct a new MemoryManager with the given MemoryClient and memory size
         public MemoryManager()
         {
-            
+
         }
      }
 
