@@ -1,7 +1,10 @@
-namespace HypeVM.VM
+namespace HypeVM.Master.VM
 {
 
     using System;
+
+    using Master.Memory;
+    using Master.Registers;
 
     //Represents a virtual machine
     public sealed class VM
@@ -11,7 +14,7 @@ namespace HypeVM.VM
         private MemoryManager memoryManager;
 
         //The machine's RegisterManager
-        private Registermanager registerManager;
+        private RegisterManager registerManager;
 
         //The device manager of this machine (holds the connected devices)
         private DeviceManager deviceManager;
@@ -26,8 +29,11 @@ namespace HypeVM.VM
             //Set the bytecode to be run on this machine (TODO: move this to a non-static initialization block)
             // Utils.Init.bootMachine(this, bytecode);
 
-            //Set this machine's memory
-            // this.memory = memory;
+            //Set this machine's MemoryManager
+            this.memoryManager = memoryManager;
+
+            //Set this machine's RegisterManager
+            this.registerManager = registerManager;
 
             //Set this machine's device manager
             // this.deviceManager = deviceManager;
