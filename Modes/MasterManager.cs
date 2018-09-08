@@ -13,6 +13,7 @@ namespace HypeVM.Main
     using System.IO;
 
     using HypeVM.Slave.Servers.Memory;
+    using HypeVM.Master.Clients.Memory;
 
     public class MasterManager
     {
