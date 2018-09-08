@@ -5,7 +5,7 @@
  *
  */
 
- namespace HypeVM.VM
+ namespace HypeVM.Master.VM
  {
 
      using System;

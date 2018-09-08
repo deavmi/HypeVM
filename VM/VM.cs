@@ -36,11 +36,21 @@ namespace HypeVM.Master.VM
             //Set this machine's RegisterManager
             this.registerManager = registerManager;
 
-            //Set this machine's device manager
-            // this.deviceManager = deviceManager;
+            //Set this machine's DeviceManager
+            this.deviceManager = deviceManager;
+
+            //Print out information about the VM's configuration now
+            outputVMInfo();
 
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[VM]: Created new virtual machine.");
+        }
+
+        //Output information about the VM's configuration
+        public void outputVMInfo()
+        {
+            //TODO: Implement me
+            Console.Out.WriteLine();
         }
 
         //Begin running of code
@@ -50,7 +60,7 @@ namespace HypeVM.Master.VM
             Console.Out.WriteLine("[VM]: Code running begin");
 
             //Code loop here
-            while(true)
+            while (true)
             {
                 //TODO: implement me
 
@@ -64,25 +74,25 @@ namespace HypeVM.Master.VM
             Console.Out.WriteLine("[VM]: Machine code run completed, now halted.");
         }
 
-        //Returns this machine's devices (device manager)
+        //Returns this machine's devices (DeviceManager)
         public DeviceManager getDeviceManager()
         {
             return deviceManager;
         }
 
-        //Returns this machine's registers
-        public RegisterState getRegisters()
+        //Returns this machine's registers (RegisterManager)
+        public RegisterManager getRegisters()
         {
-            return registers;
+            return registerManager;
         }
 
-        //Returns this machine's memory
-        public Memory getMemory()
+        //Returns this machine's memory (MemoryManager)
+        public MemoryManager getMemory()
         {
-            return memory;
+            return memoryManager;
         }
     }
 
-    
+
 
 }
