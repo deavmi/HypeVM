@@ -8,13 +8,13 @@ namespace HypeVM.VM
     {
 
         //The machine's memory
-        private Memory memory;
+        // private Memory memory;
 
         //The machine's registers
-        private RegisterState registers = new RegisterState();
+        // private RegisterState registers = new RegisterState();
 
         //The device manager of this machine (holds the connected devices)
-        private DeviceManager deviceManager;
+        // private DeviceManager deviceManager;
 
         //Create a new VM with the given program `bytecode`
         //and memory `Memory`
@@ -24,13 +24,13 @@ namespace HypeVM.VM
             Console.Out.WriteLine("[VM]: New machine being initialized...");
 
             //Set the bytecode to be run on this machine (TODO: move this to a non-static initialization block)
-            Utils.Init.bootMachine(this, bytecode);
+            // Utils.Init.bootMachine(this, bytecode);
 
             //Set this machine's memory
-            this.memory = memory;
+            // this.memory = memory;
 
             //Set this machine's device manager
-            this.deviceManager = deviceManager;
+            // this.deviceManager = deviceManager;
 
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[VM]: Created new virtual machine.");
