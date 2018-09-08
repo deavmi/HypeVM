@@ -7,8 +7,9 @@
 
 namespace HypeVM.Slave.Servers.Registers
 {
+    
     //Represents the state of the machine's registers
-    public sealed class RegisterState
+    public sealed class Registers
     {
 
         //The general purpose registers
