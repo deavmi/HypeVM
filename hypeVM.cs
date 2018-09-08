@@ -4,8 +4,8 @@ namespace HypeVM.Main
     using System;
     using System.IO;
 
-    using VM.Devices;
-    using Slave.Servers.MemoryServer;
+    // using VM.Devices;
+    // using Slave.Servers.MemoryServer;
 
 
     public class hypeVM
@@ -83,53 +83,53 @@ namespace HypeVM.Main
             //oldCode(); //Currently disabled
         }
 
-        private static void oldCode()
-        {
-            //TODO: Implement me
-            //Load the configuration of the virtual machine
-            Configuration.loadConfig();
-            Configuration.fff();
+        // private static void oldCode()
+        // {
+        //     //TODO: Implement me
+        //     //Load the configuration of the virtual machine
+        //     Configuration.loadConfig();
+        //     Configuration.fff();
 
-            //Check whether or not we need to run tests, if so run them
-            if (testsEnabled)
-            {
-                Console.Out.WriteLine("Running tests...");
-                runTests();
-                Console.Out.WriteLine("All tests run.");
-            }
-        }
+        //     //Check whether or not we need to run tests, if so run them
+        //     if (testsEnabled)
+        //     {
+        //         Console.Out.WriteLine("Running tests...");
+        //         runTests();
+        //         Console.Out.WriteLine("All tests run.");
+        //     }
+        // }
 
         //Run the tests
-        private static void runTests()
-        {
-            //Testing
+        // private static void runTests()
+        // {
+        //     //Testing
 
-            //Create an array of some devices
-            Device[] devices = new Device[] { new Plugins.Devices.NullDevice.NullDevice() };
+        //     //Create an array of some devices
+        //     Device[] devices = new Device[] { new Plugins.Devices.NullDevice.NullDevice() };
 
-            //Create a new DeviceManager for this machine (TODO: Remove null)
-            DeviceManager deviceManager = new DeviceManager(devices);
+        //     //Create a new DeviceManager for this machine (TODO: Remove null)
+        //     DeviceManager deviceManager = new DeviceManager(devices);
 
-            //Create a new VM
-            VM.VM vm = new VM.VM(null, new Memory(32767), deviceManager); //TODO: Remove null
+        //     //Create a new VM
+        //     VM.VM vm = new VM.VM(null, new Memory(32767), deviceManager); //TODO: Remove null
 
-            VM.Utils.Utils.memTest(vm);
-            // while(true)
-            // {
+        //     VM.Utils.Utils.memTest(vm);
+        //     // while(true)
+        //     // {
 
-            // }
-
-
+        //     // }
 
 
 
-            //Code below is run once all machine tests have finished
 
-            //Make the machine begin execution
-            Console.Out.WriteLine("Beginning execution of machine...");
-            vm.beginRun();
-            Console.Out.WriteLine("Machine execution finished");
 
-        }
+        //     //Code below is run once all machine tests have finished
+
+        //     //Make the machine begin execution
+        //     Console.Out.WriteLine("Beginning execution of machine...");
+        //     vm.beginRun();
+        //     Console.Out.WriteLine("Machine execution finished");
+
+        // }
     }
 }
