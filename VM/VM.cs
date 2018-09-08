@@ -7,14 +7,14 @@ namespace HypeVM.VM
     public sealed class VM
     {
 
-        //The machine's memory
-        // private Memory memory;
+        //The machine's MemoryManager
+        private MemoryManager memoryManager;
 
-        //The machine's registers
-        // private RegisterState registers = new RegisterState();
+        //The machine's RegisterManager
+        private Registermanager registerManager;
 
         //The device manager of this machine (holds the connected devices)
-        // private DeviceManager deviceManager;
+        private DeviceManager deviceManager;
 
         //Create a new VM with the given program `bytecode`
         //and memory `Memory`
