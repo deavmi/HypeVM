@@ -28,7 +28,7 @@ namespace HypeVM.Main
         {
             string nextLine = "";
 
-            //Read each byte of the file till EOF is reached
+            //Read each byte till a newline or EOF is reached
             while(true)
             {
                 //Current signal
@@ -38,11 +38,15 @@ namespace HypeVM.Main
                 if(signal == -1)
                 {
                     //TODO: Implement EOF handling
+                    break;
                 }
                 //Otehrwise it is the actual byte between 0 and 255
                 else
                 {
                     //TODO: Implement byte handling
+                    byte readByte = (byte)signal;
+
+                    char readChar = (char)readByte;
                 }
             }
 
