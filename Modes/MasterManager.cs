@@ -53,7 +53,11 @@ namespace HypeVM.Main
 
 
             //Create the virtual machine
-            VM vm
+            
+
+
+
+            
         }
     }
 }
