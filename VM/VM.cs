@@ -5,6 +5,7 @@ namespace HypeVM.Master.VM
 
     using Master.Memory;
     using Master.Registers;
+    using Master.Devices;
 
     //Represents a virtual machine
     public sealed class VM
