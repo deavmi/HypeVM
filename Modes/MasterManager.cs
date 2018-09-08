@@ -41,7 +41,7 @@ namespace HypeVM.Main
             //TODO: Implement the reading of lines
             textReader.getNextLine();
             
-            //Test configuration put in place whilst I work on the TextReader module
+            //TODO: Test configuration put in place whilst I work on the TextReader module
             string memoryServerIP = "127.0.0.1";
             int memoryServerPort = 3001;
 
