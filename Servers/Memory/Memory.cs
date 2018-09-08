@@ -1,4 +1,4 @@
-namespace HypeVM.Slave.Servers.MemoryServer
+namespace HypeVM.Slave.Servers.Memory
 {
 
     using System;
