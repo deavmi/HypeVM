@@ -8,6 +8,14 @@
  namespace HypeVM.Master.Memory
  {
 
-
+     //Manager for the virtual machine's memory
+     public sealed class MemoryManager
+     {
+        //Construct a new MemoryManager
+        public MemoryManager()
+        {
+            
+        }
+     }
 
  }

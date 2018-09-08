@@ -8,12 +8,14 @@
 namespace HypeVM.Master.Registers
 {
 
+
+    //Manager for the virtual machine's registers
     public sealed class RegisterManager
     {
         //Construct a new RegisterManager
         public RegisterManager()
         {
-            
+
         }
     }
 
