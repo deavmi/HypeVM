@@ -7,6 +7,8 @@
 
 namespace  HypeVM.Master.Clients.Memory
 {
+
+    //Represents the connection to the slave MemoryServer node
     public sealed class MemoryClient
     {
 
@@ -15,6 +17,9 @@ namespace  HypeVM.Master.Clients.Memory
 
         //Port (TCP) of the memory server
         private int port;
+
+        //The Socket connection to the memory server
+        private Socket socket;
 
         //Construct a new MemoryClient
         public MemoryClient(string memoryServerIP, int port)
@@ -26,5 +31,9 @@ namespace  HypeVM.Master.Clients.Memory
             //Output some debugging information
             Console.Out.WriteLine("[MemoryClient] New MemoryClient created with parameters <"+memoryServerIP+":"+port+">");
         }
+
+        //Connect to the memory server
+        //TODO: Figure out how to implement this
+
     }
 }
