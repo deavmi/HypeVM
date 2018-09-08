@@ -58,6 +58,7 @@ namespace HypeVM.Main
             Console.Out.WriteLine("[MasterManager] Setting up virtual machine...");
             
 
+        
 
             //Virtual machine has ended
             Console.Out.WriteLine("[MasterManager] VM run completed.");

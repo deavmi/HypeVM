@@ -1,4 +1,4 @@
-namespace HypeVM.VM.Devices
+namespace HypeVM.Master.Devices
 {
 
     using System;
