@@ -50,9 +50,27 @@ namespace HypeVM.Main
 
             //Setup the relevant servers
             Console.Out.WriteLine("[MasterManager] Setting up servers...");
+            
+            //Setup the MemoryClient
+            //TODO: Implement me
+
+            //Setup the RegisterClient
+            //TODO: Implement me
 
 
             Console.Out.WriteLine("[MasterManager] Setting up servers...");
+
+
+            //Setup the managers
+
+            //Setup the MemoryManager
+            //TODO: Implement me
+
+            //Setup the RegisterManager
+            //TODO: Implement me
+
+            //Setup the DeviceManager
+            //TODO: Implement me
 
             //Create the virtual machine
             Console.Out.WriteLine("[MasterManager] Setting up virtual machine...");
