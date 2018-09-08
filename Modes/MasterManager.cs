@@ -58,7 +58,7 @@ namespace HypeVM.Main
             //TODO: Implement me
 
 
-            Console.Out.WriteLine("[MasterManager] Setting up servers...");
+            Console.Out.WriteLine("[MasterManager] Setting up managers...");
 
 
             //Setup the managers
