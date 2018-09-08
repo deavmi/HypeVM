@@ -18,7 +18,7 @@ namespace HypeVM.VM
 
         //Create a new VM with the given program `bytecode`
         //and memory `Memory`
-        public VM(Bytecode.Bytecode bytecode, Memory memory, DeviceManager deviceManager)
+        public VM(MemoryManager memoryManager, RegisterManager registerManager, DeviceManager deviceManager)
         {
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[VM]: New machine being initialized...");

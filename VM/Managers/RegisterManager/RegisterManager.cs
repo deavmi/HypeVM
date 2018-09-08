@@ -5,7 +5,16 @@
  *
  */
 
- namespace HypeVM.Master.Registers
- {
-     
- }
+namespace HypeVM.Master.Registers
+{
+
+    public sealed class RegisterManager
+    {
+        //Construct a new RegisterManager
+        public RegisterManager()
+        {
+            
+        }
+    }
+
+}
