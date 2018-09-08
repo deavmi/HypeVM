@@ -7,4 +7,4 @@ Todo List
 * Implement basic memory and register functions tomorrow
 * Implement arithmetic functions
 * LocalMemory and various others
-* Add IDs to devices and a way for unified strutured information getting of them in memory
+* Add IDs to devices and a way for unified strutured information getting of to them in memory
