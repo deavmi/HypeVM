@@ -28,7 +28,23 @@ namespace HypeVM.Main
         {
             string nextLine = "";
 
-            //TODO: Implement me
+            //Read each byte of the file till EOF is reached
+            while(true)
+            {
+                //Current signal
+                int signal = fileStream.ReadByte();
+
+                //If the signal is -1 then it is EOF
+                if(signal == -1)
+                {
+                    //TODO: Implement EOF handling
+                }
+                //Otehrwise it is the actual byte between 0 and 255
+                else
+                {
+                    //TODO: Implement byte handling
+                }
+            }
 
             return nextLine;
         }
