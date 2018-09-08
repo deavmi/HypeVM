@@ -1,3 +1,10 @@
+/*
+ * Memory
+ *
+ * The internals used by the MemoryServer to keep track of the VM's memory.
+ *
+ */
+
 namespace HypeVM.Slave.Servers.Memory
 {
 
