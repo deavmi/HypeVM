@@ -12,6 +12,8 @@ namespace HypeVM.Main
     using System;
     using System.IO;
 
+    using HypeVM.Slave.Servers.Memory;
+
     public class MasterManager
     {
 
@@ -38,8 +40,15 @@ namespace HypeVM.Main
             //TODO: Implement the reading of lines
             textReader.getNextLine();
             
+            //Test configuration put in place whilst I work on the TextReader module
+            string memoryServerIP = "127.0.0.1";
+            int memoryServerPort = 3001;
+
+            string registerServerIP = "127.0.0.1";
+            int registerServerPort = 3002;
 
             //Setup the relevant servers
+            
 
 
             //Create the virtual machine

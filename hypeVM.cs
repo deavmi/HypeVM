@@ -8,7 +8,7 @@ namespace HypeVM.Main
     using Slave.Servers.MemoryServer;
 
 
-    public class HypeVM
+    public class hypeVM
     {
 
         //Whether or not to run tests

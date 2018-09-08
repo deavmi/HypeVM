@@ -26,6 +26,7 @@ namespace HypeVM.Main
         //Returns either a reference to a string object or null
         public string getNextLine()
         {
+            //The created lines
             string nextLine = "";
 
             //Read each byte till a newline or EOF is reached

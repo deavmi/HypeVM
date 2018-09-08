@@ -2,6 +2,7 @@ Todo List
 =========
 
 * Make namespaces spaces nice (starting with HypeVM)
+* Get TextReader finished and working
 * Finsh machine internals
 * Implement basic memory and register functions tomorrow
 * Implement arithmetic functions
