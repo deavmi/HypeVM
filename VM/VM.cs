@@ -3,10 +3,6 @@ namespace HypeVM.VM
 
     using System;
 
-    using Bytecode;
-    using Devices;
-    using HypeVM.Slave.Servers.MemoryServer;
-
     //Represents a virtual machine
     public sealed class VM
     {

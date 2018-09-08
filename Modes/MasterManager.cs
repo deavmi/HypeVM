@@ -49,15 +49,19 @@ namespace HypeVM.Main
             int registerServerPort = 3002;
 
             //Setup the relevant servers
-            
+            Console.Out.WriteLine("[MasterManager] Setting up servers...");
 
+
+            Console.Out.WriteLine("[MasterManager] Setting up servers...");
 
             //Create the virtual machine
+            Console.Out.WriteLine("[MasterManager] Setting up virtual machine...");
             
 
 
+            //Virtual machine has ended
+            Console.Out.WriteLine("[MasterManager] VM run completed.");
 
-            
         }
     }
 }
