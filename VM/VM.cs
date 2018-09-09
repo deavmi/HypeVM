@@ -2,6 +2,7 @@ namespace HypeVM.Master.VM
 {
 
     using System;
+    using System.Threading;
 
     using Master.Memory;
     using Master.Registers;
@@ -66,6 +67,9 @@ namespace HypeVM.Master.VM
 
                 //Execute a machine cycle
                 Executor.cycle(this);
+
+                //Wait before starting the next machine cycle as I don't ant this thing to go too fast just hyet
+                Thread.Sleep(2000);
             }
 
             //Output information (TODO: Finish me)
