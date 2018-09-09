@@ -89,10 +89,14 @@ namespace HypeVM.Main
             //TODO: Implement me
             //DeviceManager deviceMamnager = null;
 
-            //Create the virtual machine
+
             Console.Out.WriteLine("[MasterManager] Setting up virtual machine...");
 
+            //Create the virtual machine
             VM virtualMachine = new VM(memoryManager,registerManager,null);
+
+            //Start the virtual machine
+            virtualMachine.beginRun();
 
 
             //Virtual machine has ended

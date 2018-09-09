@@ -26,7 +26,7 @@
             
             //TODO: Implement me (The execution of the machine code)
 
-            
+
 
 
 
@@ -34,7 +34,7 @@
             //2. poll all devices via devicemanager
             Console.Out.WriteLine("[Executor]: Poll devices begin.");
             //TODO: Implement me
-            vm.getDeviceManager().pollDevices(); //lol continue here this that
+            //vm.getDeviceManager().pollDevices(); Disabled for now
             Console.Out.WriteLine("[Executor]: Poll devices end.");
 
             //Output information (TODO: Finish me)
