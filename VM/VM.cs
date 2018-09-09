@@ -126,14 +126,31 @@ namespace HypeVM.Master.VM
             short instructionPointer = codeFirst;
 
             //TODO: Add code to set the registers here
+            registerManager.
 
             //Output information on the values to assign to the registers
             Console.Out.WriteLine("CodeFirst value: " + codeFirst);
             Console.Out.WriteLine("CodeLast value: " + codeLast);
             Console.Out.WriteLine("InstructionPointer value: " + instructionPointer);
             
-
             
         }
+
+
+        //TODO: Abstract lolwot (is there OOP up in this property shit)
+        public byte valueOgdsgfdsdne
+        {
+            get
+            {
+                return 1;
+            }
+
+            set
+            {
+                Console.Out.Write("");
+                value = 1; //Ah this is the internally tracked value
+            }
+        }
+
     }
 }
