@@ -9,6 +9,7 @@ namespace HypeVM.Master.Clients.Register
 {
 
     using System.Net.Sockets;
+    using System.Threading;
     using System;
 
     //Represents the connection to the slave RegisterServer node
@@ -35,8 +36,27 @@ namespace HypeVM.Master.Clients.Register
             Console.Out.WriteLine("[RegiserClient] New RegiserClient created with parameters <"+registerServerIP+":"+port+">");
         }
 
-        //Connect to the register server
+        //Connect to the register server and begin
         //TODO: Figure out how to implement this
+        public void start()
+        {
+            //Output some information
+            Console.Out.WriteLine("[RegisterClient] Configuring and starting thread for RegisterClient...");
+
+            //TODO: Add stuff to setup stuff here
+
+            //TODO: Begin the thread now with everything setup with the given delegate function `run`
+            Thread thread = new Thread(run);
+            thread.Start();
+
+            Console.Out.WriteLine("[RegisterClient] Configured and thread started.");
+        }
+
+        //The code to be run by the thread
+        private void run()
+        {
+            Console.Out.WriteLine("[RegisterClient] Beginning of thread");
+        }
 
     }
 }

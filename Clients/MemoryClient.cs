@@ -8,6 +8,10 @@
 namespace  HypeVM.Master.Clients.Memory
 {
 
+    using System.Net.Sockets;
+    using System.Threading;
+    using System;
+
     //Represents the connection to the slave MemoryServer node
     public sealed class MemoryClient
     {
@@ -32,8 +36,27 @@ namespace  HypeVM.Master.Clients.Memory
             Console.Out.WriteLine("[MemoryClient] New MemoryClient created with parameters <"+memoryServerIP+":"+port+">");
         }
 
-        //Connect to the memory server
+        //Connect to the memory server and begin
         //TODO: Figure out how to implement this
+        public void start()
+        {
+            //Output some information
+            Console.Out.WriteLine("[MemoryClient] Configuring and starting thread for MemoryClient...");
+
+            //TODO: Add stuff to setup stuff here
+
+            //TODO: Begin the thread now with everything setup with the given delegate function `run`
+            Thread thread = new Thread(run);
+            thread.Start();
+
+            Console.Out.WriteLine("[MemoryClient] Configured and thread started.");
+        }
+
+        //The code to be run by the thread
+        private void run()
+        {
+            Console.Out.WriteLine("[MemoryClient] Beginning of thread");
+        }
 
     }
 }

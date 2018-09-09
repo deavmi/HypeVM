@@ -56,11 +56,15 @@ namespace HypeVM.Main
             //TODO: Implement me
             MemoryClient memoryClient = new MemoryClient(memoryServerIP, memoryServerPort);
 
+            //Setup anything that needs to be setup for the MemoryClient and then begin its Thread
+            memoryClient.start();            
+
             //Setup the RegisterClient
             //TODO: Implement me
             RegisterClient registerClient = new RegisterClient(registerServerIP, registerServerPort);
             
-
+            //Setup anything that needs to be setup for the RegisterClient and then begin its Thread
+            registerClient.start();
 
 
             Console.Out.WriteLine("[MasterManager] Setting up managers...");
@@ -70,6 +74,7 @@ namespace HypeVM.Main
 
             //Setup the MemoryManager
             //TODO: Implement me
+
 
             //Setup the RegisterManager
             //TODO: Implement me
