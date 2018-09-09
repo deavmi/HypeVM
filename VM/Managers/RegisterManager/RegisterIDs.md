@@ -9,3 +9,5 @@ Below we list all of these IDs and their corresponding registers.
     * **ID:** `0`
 2.  `codeLast`
     * **ID:** `1`
+3.  `instructionPointer`
+    * **ID:** `2`

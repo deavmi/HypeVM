@@ -20,8 +20,8 @@ namespace HypeVM.Master.Registers
 
         //We will use properties to make accessing this way nicer and easier
 
-        //The `codeBegin` register
-        public short codeBegin
+        //The `codeFirst` register
+        public short codeFirst
         {
 
             //Get the value from the RegisterServer
@@ -34,6 +34,40 @@ namespace HypeVM.Master.Registers
             set
             {
                 setRegister(value, 0);
+            }
+        }
+
+        //The `codeLast` register
+        public short codeLast
+        {
+
+            //Get the value from the RegisterServer
+            get
+            {
+                return getRegister(1);
+            }
+
+            //Send this to the RegisterServer
+            set
+            {
+                setRegister(value, 1);
+            }
+        }
+
+        //The `instructionPointer` register
+        public short instructionPointer
+        {
+
+            //Get the value from the RegisterServer
+            get
+            {
+                return getRegister(2);
+            }
+
+            //Send this to the RegisterServer
+            set
+            {
+                setRegister(value, 2);
             }
         }
 

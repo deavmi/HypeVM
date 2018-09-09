@@ -126,7 +126,12 @@ namespace HypeVM.Master.VM
             short instructionPointer = codeFirst;
 
             //TODO: Add code to set the registers here
-            registerManager.
+
+            //This code will use the properties to assign values to them but in actual fact will be communicating via the RegisterManeger
+            //and via it to the RegisterClient which will send the data over to the RegisterSever.
+            registerManager.codeFirst = codeFirst;
+            registerManager.codeLast = codeLast;
+            registerManager.instructionPointer = instructionPointer;
 
             //Output information on the values to assign to the registers
             Console.Out.WriteLine("CodeFirst value: " + codeFirst);
