@@ -79,6 +79,7 @@ namespace  HypeVM.Master.Clients.Memory
             socket.Send(encodedASCIIMessage); //TODO: continue work here, UTF 16 is compatible with ASCII it has be as I said, lol
 
             //Enter the read/write socket loop
+            //OVerflowed kanker: :)
             loop();
         }
 
