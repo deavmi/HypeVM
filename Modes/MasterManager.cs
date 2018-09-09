@@ -52,12 +52,15 @@ namespace HypeVM.Main
             string registerServerIP = "127.0.0.1";
             int registerServerPort = 3002;
 
+            //Set the memory size to the maximum possible size for the HypeVM
+            short memorySize = 32767;
+
             //Setup the relevant servers
             Console.Out.WriteLine("[MasterManager] Setting up servers...");
 
             //Setup the MemoryClient
             //TODO: Implement me
-            MemoryClient memoryClient = new MemoryClient(memoryServerIP, memoryServerPort);
+            MemoryClient memoryClient = new MemoryClient(memoryServerIP, memoryServerPort, memorySize);
 
             //Setup anything that needs to be setup for the MemoryClient and then begin its Thread
             memoryClient.start();
@@ -72,9 +75,6 @@ namespace HypeVM.Main
 
             //Setup the managers
             Console.Out.WriteLine("[MasterManager] Setting up managers...");
-
-            //Set the memory size to the maximum possible size for the HypeVM
-            short memorySize = 32767;
 
             //Setup the MemoryManager
             //TODO: Implement me
@@ -93,7 +93,7 @@ namespace HypeVM.Main
             Console.Out.WriteLine("[MasterManager] Setting up virtual machine...");
 
             //Create the virtual machine
-            VM virtualMachine = new VM(memoryManager,registerManager,null);
+            VM virtualMachine = new VM(memoryManager, registerManager, null);
 
             //Load the init image into the machine's memory and set the respective registers
             virtualMachine.bootMachine("init.img"); //TODO: change me

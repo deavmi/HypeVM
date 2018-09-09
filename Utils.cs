@@ -33,6 +33,16 @@ namespace HypeVM.Utils
 
             return encodedASCII.ToArray();
         }
+
+        //Decode an array of bytes into a string og ASCII characters
+        public string decodeASCI(byte[] asciiBytes)
+        {
+            string decodedString = "";
+
+            //TODO: Implement me
+
+            return decodedString;
+        }
     }
 
 }
