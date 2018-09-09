@@ -69,7 +69,7 @@ namespace HypeVM.Master.VM
                 Executor.cycle(this);
 
                 //Wait before starting the next machine cycle as I don't ant this thing to go too fast just hyet
-                //Thread.Sleep(2000);
+                Thread.Sleep(2000);
             }
 
             //Output information (TODO: Finish me)
