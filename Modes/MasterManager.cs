@@ -96,7 +96,7 @@ namespace HypeVM.Main
             VM virtualMachine = new VM(memoryManager,registerManager,null);
 
             //Load the init image into the machine's memory and set the respective registers
-            virtualMachine.bootMachine("test.txt"); //TODO: change me
+            virtualMachine.bootMachine("init.img"); //TODO: change me
 
             //Start the virtual machine
             virtualMachine.beginRun();
