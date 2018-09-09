@@ -67,13 +67,12 @@ namespace HypeVM.Main
             registerClient.start();
 
 
-            Console.Out.WriteLine("[MasterManager] Setting up managers...");
-
-
             //Setup the managers
+            Console.Out.WriteLine("[MasterManager] Setting up managers...");
 
             //Setup the MemoryManager
             //TODO: Implement me
+            
 
 
             //Setup the RegisterManager

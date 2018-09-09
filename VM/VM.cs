@@ -91,8 +91,49 @@ namespace HypeVM.Master.VM
         {
             return memoryManager;
         }
+
+        //Boot the machine with the given init image
+        public void bootMachine(string initImagePathname)
+        {
+            Console.Out.WriteLine("Booting machine with image \""+initImagePathname + "\"...");
+
+            //TODO: Implement me
+
+            //Read all the bytes from the file into an array of bytes
+            ByteReader byteReader = new ByteReader(initImagePathname);
+            byte[] codeBytes = byteReader.readBytes();
+
+            Console.Out.WriteLine("Code loaded into memory size (bytes): " + codeBytes.Length);
+
+            //Memory addresses
+            short startingAddress = 0; //The starting address for code is at the beginning of memory
+            short currentByteAddress = 0; //The current address we are at in memory, will point to the last
+            //byte of the code loaded into memory
+
+            //Now load all the bytes into memory
+            for(short byteIndex = 0; byteIndex < codeBytes.Length; byteIndex++)
+            {
+                //Now via the memory manager load each byte into the correct address
+                currentByteAddress = (short)(startingAddress + byteIndex);
+                memoryManager.setByte(currentByteAddress, codeBytes[byteIndex]);
+            }
+
+            //Set the registers to hold to the correct addresses
+            short codeFirst = startingAddress; //First byte of code address
+            short codeLast = currentByteAddress; //Last byte of code address
+
+            //Set the instruction pointer to the first byte of the code
+            short instructionPointer = codeFirst;
+
+            //TODO: Add code to set the registers here
+
+            //Output information on the values to assign to the registers
+            Console.Out.WriteLine("CodeFirst value: " + codeFirst);
+            Console.Out.WriteLine("CodeLast value: " + codeLast);
+            Console.Out.WriteLine("InstructionPointer value: " + instructionPointer);
+            
+
+            
+        }
     }
-
-
-
 }

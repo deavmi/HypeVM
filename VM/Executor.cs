@@ -22,7 +22,14 @@
             //TODO: Implement me
             //1. Add exeuction and management of code
             Console.Out.WriteLine("[Executor]: Code execution cylce begin.");
-            //TODO: Implement me
+            
+            
+            //TODO: Implement me (The execution of the machine code)
+
+            
+
+
+
             Console.Out.WriteLine("[Executor]: Code execution cylce end.");
             //2. poll all devices via devicemanager
             Console.Out.WriteLine("[Executor]: Poll devices begin.");
