@@ -25,7 +25,8 @@
             
             
             //TODO: Implement me (The execution of the machine code)
-
+            short instructionPointerAddress = vm.getRegisters().instructionPointer;
+            Console.Out.WriteLine("Current instruction pointer value (an address): " + instructionPointerAddress);
 
 
 
