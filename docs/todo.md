@@ -11,3 +11,5 @@ Todo List
 * Add IDs to devices and a way for unified strutured information getting of to them in memory
 * Plug and play devices that can have memory allocated to them on connected and setup easily.
 * Signals, like interrupts.
+
+* Lekker revision of the whole project :)

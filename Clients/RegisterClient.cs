@@ -5,11 +5,14 @@
  *
  */
 
-namespace  HypeVM.Master.Clients.Register
+namespace HypeVM.Master.Clients.Register
 {
 
+    using System.Net.Sockets;
+    using System;
+
     //Represents the connection to the slave RegisterServer node
-    public sealed class RegiserClient
+    public sealed class RegisterClient
     {
 
         //IP address of the register server
@@ -22,7 +25,7 @@ namespace  HypeVM.Master.Clients.Register
         private Socket socket;
 
         //Construct a new MemoryClient
-        public RegiserClient(string registerServerIP, int port)
+        public RegisterClient(string registerServerIP, int port)
         {
             //Set the parameters of the RegisterClient
             this.registerServerIP = registerServerIP;

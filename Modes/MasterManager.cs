@@ -14,6 +14,7 @@ namespace HypeVM.Main
 
     using HypeVM.Slave.Servers.Memory;
     using HypeVM.Master.Clients.Memory;
+    using HypeVM.Master.Clients.Register;
 
     public class MasterManager
     {
@@ -53,9 +54,13 @@ namespace HypeVM.Main
             
             //Setup the MemoryClient
             //TODO: Implement me
+            MemoryClient memoryClient = new MemoryClient(memoryServerIP, memoryServerPort);
 
             //Setup the RegisterClient
             //TODO: Implement me
+            RegisterClient registerClient = new RegisterClient(registerServerIP, registerServerPort);
+            
+
 
 
             Console.Out.WriteLine("[MasterManager] Setting up managers...");

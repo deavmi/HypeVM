@@ -42,10 +42,9 @@ namespace HypeVM.Slave.Servers.Memory
             }
         }
 
-        //Return the size of this memory in bytes
-        public short getSize()//TODO/FIXME: Think about this tomorrow
+        //Return the size of this memory in bytes (TODO: Lekker revision for alles)
+        public short getSize()
         {
-            //TODO: return memory.Length;
             return (short)memory.Length;
         }
 
@@ -53,6 +52,14 @@ namespace HypeVM.Slave.Servers.Memory
         public byte getByte(short address)
         {
             //TODO: Throw error when `address` is negative or not in range of [0,nonZeroSize-1]
+            if(address > getSize()-1)
+            {
+                //If the given address is higher than the memory's highest address
+            }
+            else if(address < 0)
+            {
+                //If the given address is less than zero (negative) then give an error
+            }
 
             //The value at that address
             byte valueAtAddress = 0;
