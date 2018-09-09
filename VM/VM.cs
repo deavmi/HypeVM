@@ -66,8 +66,6 @@ namespace HypeVM.Master.VM
 
                 //Execute a machine cycle
                 Executor.cycle(this);
-
-                break;
             }
 
             //Output information (TODO: Finish me)
@@ -95,7 +93,7 @@ namespace HypeVM.Master.VM
         //Boot the machine with the given init image
         public void bootMachine(string initImagePathname)
         {
-            Console.Out.WriteLine("Booting machine with image \""+initImagePathname + "\"...");
+            Console.Out.WriteLine("Booting machine with image \"" + initImagePathname + "\"...");
 
             //TODO: Implement me
 
@@ -111,10 +109,15 @@ namespace HypeVM.Master.VM
             //byte of the code loaded into memory
 
             //Now load all the bytes into memory
-            for(short byteIndex = 0; byteIndex < codeBytes.Length; byteIndex++)
+            for (short byteIndex = 0; byteIndex < codeBytes.Length; byteIndex++)
             {
                 //Now via the memory manager load each byte into the correct address
                 currentByteAddress = (short)(startingAddress + byteIndex);
+
+                //Output information
+                //TODO: Fix me :) Overflows
+                Console.Out.WriteLine("Current index: " + byteIndex); //error is when this is -32768
+
                 memoryManager.setByte(currentByteAddress, codeBytes[byteIndex]);
             }
 
@@ -137,8 +140,8 @@ namespace HypeVM.Master.VM
             Console.Out.WriteLine("CodeFirst value: " + codeFirst);
             Console.Out.WriteLine("CodeLast value: " + codeLast);
             Console.Out.WriteLine("InstructionPointer value: " + instructionPointer);
-            
-            
+
+
         }
 
 
