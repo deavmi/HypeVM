@@ -17,6 +17,7 @@ namespace HypeVM.Main
     using HypeVM.Master.Clients.Register;
     using HypeVM.Master.Memory;
     using HypeVM.Master.Registers;
+    using HypeVM.Master.VM;
 
     public class MasterManager
     {
@@ -43,7 +44,7 @@ namespace HypeVM.Main
             TextReader textReader = new TextReader(configFilePath);
             //TODO: Implement the reading of lines
             textReader.getNextLine();
-            
+
             //TODO: Test configuration put in place whilst I work on the TextReader module
             string memoryServerIP = "127.0.0.1";
             int memoryServerPort = 3001;
@@ -53,18 +54,18 @@ namespace HypeVM.Main
 
             //Setup the relevant servers
             Console.Out.WriteLine("[MasterManager] Setting up servers...");
-            
+
             //Setup the MemoryClient
             //TODO: Implement me
             MemoryClient memoryClient = new MemoryClient(memoryServerIP, memoryServerPort);
 
             //Setup anything that needs to be setup for the MemoryClient and then begin its Thread
-            memoryClient.start();            
+            memoryClient.start();
 
             //Setup the RegisterClient
             //TODO: Implement me
             RegisterClient registerClient = new RegisterClient(registerServerIP, registerServerPort);
-            
+
             //Setup anything that needs to be setup for the RegisterClient and then begin its Thread
             registerClient.start();
 
@@ -72,10 +73,12 @@ namespace HypeVM.Main
             //Setup the managers
             Console.Out.WriteLine("[MasterManager] Setting up managers...");
 
+            //Set the memory size to the maximum
+            short memorySize = 32767;
+
             //Setup the MemoryManager
             //TODO: Implement me
-            MemoryManager memoryManager;
-            
+            MemoryManager memoryManager = new MemoryManager(memoryClient, memorySize);
 
 
             //Setup the RegisterManager
@@ -84,12 +87,13 @@ namespace HypeVM.Main
 
             //Setup the DeviceManager
             //TODO: Implement me
+            //DeviceManager deviceMamnager = null;
 
             //Create the virtual machine
             Console.Out.WriteLine("[MasterManager] Setting up virtual machine...");
-            
 
-        
+            VM virtualMachine = new VM(memoryManager,registerManager,null);
+
 
             //Virtual machine has ended
             Console.Out.WriteLine("[MasterManager] VM run completed.");
