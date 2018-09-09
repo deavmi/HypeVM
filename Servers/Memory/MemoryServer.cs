@@ -57,8 +57,7 @@
             Socket clientSocket = serverSocket.Accept();
 
             //Enter the read/write socket loop
-            loop();            
-
+            loop();
         }
 
         //The read/write sockect loop
