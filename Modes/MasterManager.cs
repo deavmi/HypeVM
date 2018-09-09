@@ -73,7 +73,7 @@ namespace HypeVM.Main
             //Setup the managers
             Console.Out.WriteLine("[MasterManager] Setting up managers...");
 
-            //Set the memory size to the maximum
+            //Set the memory size to the maximum possible size for the HypeVM
             short memorySize = 32767;
 
             //Setup the MemoryManager
