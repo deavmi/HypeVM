@@ -12,6 +12,7 @@ namespace  HypeVM.Master.Clients.Memory
     using System.Threading;
     using System;
     using System.Net;
+    using Utils;
 
     //Represents the connection to the slave MemoryServer node
     public sealed class MemoryClient
@@ -23,15 +24,19 @@ namespace  HypeVM.Master.Clients.Memory
         //Port (TCP) of the memory server
         private int port;
 
+        //The size of the VM's memory
+        private short memorySize;
+
         //The Socket connection to the memory server
         private Socket socket;
 
         //Construct a new MemoryClient
-        public MemoryClient(string memoryServerIP, int port)
+        public MemoryClient(string memoryServerIP, int port, short memorySize)
         {
             //Set the parameters of the MemoryClient
             this.memoryServerIP = memoryServerIP;
             this.port = port;
+            this.memorySize = memorySize;
 
             //Output some debugging information
             Console.Out.WriteLine("[MemoryClient] New MemoryClient created with parameters <"+memoryServerIP+":"+port+">");
@@ -69,8 +74,9 @@ namespace  HypeVM.Master.Clients.Memory
             //TODO: from here now
 
             //Now send accross the parameters
-            
-            socket.Send
+            string memorySizeString = "" + memorySize + "\n"; 
+            byte[] encodedASCIIMessage = Utils.encodeASCII(memorySizeString);
+            socket.Send(encodedASCIIMessage); //TODO: continue work here
 
             loop();
         }
