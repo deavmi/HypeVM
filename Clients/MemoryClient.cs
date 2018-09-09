@@ -11,6 +11,7 @@ namespace  HypeVM.Master.Clients.Memory
     using System.Net.Sockets;
     using System.Threading;
     using System;
+    using System.Net;
 
     //Represents the connection to the slave MemoryServer node
     public sealed class MemoryClient
@@ -56,6 +57,16 @@ namespace  HypeVM.Master.Clients.Memory
         private void run()
         {
             Console.Out.WriteLine("[MemoryClient] Beginning of thread");
+
+            //The ipAddress and port (TCP ) we are connecting to
+            EndPoint endPoint = new IPEndPoint(IPAddress.Parse(memoryServerIP),port);
+
+            socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+            //Connect to the the given memoryServerIP and port
+            socket.Connect(endPoint);
+
+            //TODO: from here now
         }
 
     }

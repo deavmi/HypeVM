@@ -22,6 +22,9 @@ namespace HypeVM.Main
         public void run()
         {
             Console.Out.WriteLine("[MasterManager] New master created");
+
+            //TODO: Remove this testing code
+            
         }
     }
 }
