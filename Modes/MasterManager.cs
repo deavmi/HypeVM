@@ -15,6 +15,8 @@ namespace HypeVM.Main
     using HypeVM.Slave.Servers.Memory;
     using HypeVM.Master.Clients.Memory;
     using HypeVM.Master.Clients.Register;
+    using HypeVM.Master.Memory;
+    using HypeVM.Master.Registers;
 
     public class MasterManager
     {
@@ -72,11 +74,13 @@ namespace HypeVM.Main
 
             //Setup the MemoryManager
             //TODO: Implement me
+            MemoryManager memoryManager;
             
 
 
             //Setup the RegisterManager
             //TODO: Implement me
+            RegisterManager registerManager = new RegisterManager(registerClient);
 
             //Setup the DeviceManager
             //TODO: Implement me

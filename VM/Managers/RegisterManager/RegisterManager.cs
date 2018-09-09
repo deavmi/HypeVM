@@ -8,14 +8,20 @@
 namespace HypeVM.Master.Registers
 {
 
+    using HypeVM.Master.Clients.Register;
 
     //Manager for the virtual machine's registers
     public sealed class RegisterManager
     {
-        //Construct a new RegisterManager with th given RegisterClient
-        public RegisterManager()
-        {
 
+        //The RegisterClient
+        private RegisterClient registerClient;
+
+        //Construct a new RegisterManager with th given RegisterClient
+        public RegisterManager(RegisterClient registerClient)
+        {
+            //Set this RegisterManager's registerClient
+            this.registerClient = registerClient;
         }
 
         //We will use properties to make accessing this way nicer and easier

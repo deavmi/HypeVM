@@ -8,6 +8,8 @@
 namespace HypeVM.Slave.Servers.Registers
 {
     
+    using System;
+
     //Represents the state of the machine's registers
     public sealed class Registers
     {
@@ -38,10 +40,10 @@ namespace HypeVM.Slave.Servers.Registers
         //Holds the address of the intruction in memory currently being executed
         public short instructionPointer;
 
-        public RegisterState()
+        public Registers()
         {
             //Output information (TODO: Finish me)
-            Console.Out.WriteLine("[RegisterState]: Created new virtual machine register set.");
+            Console.Out.WriteLine("[Registers]: Created new virtual machine register set.");
         }
     }
 }
