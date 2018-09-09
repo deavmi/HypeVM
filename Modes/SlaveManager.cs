@@ -9,6 +9,7 @@
 namespace HypeVM.Main
 {
     using System;
+    using HypeVM.Slave.Servers.Memory;
 
     public class SlaveManager
     {
@@ -19,12 +20,26 @@ namespace HypeVM.Main
         }
 
         //Begin the Slave node
-        public void run()
+        public void run(string slaveType, string ipBind, string portBind)
         {
             Console.Out.WriteLine("[MasterManager] New master created");
 
             //TODO: Remove this testing code
-            
+
+            if(slaveType.Equals("memory"))
+            {
+                Console.Out.WriteLine("This slave is a memory slave");
+
+                //Setup the memory slave
+                MemoryServer memoryServer = new MemoryServer(ipBind, int.Parse(portBind));
+
+
+            }
+            else if(slaveType.Equals("registers"))
+            {
+                Console.Out.WriteLine("This slave is a registers slave");
+            }
+
         }
     }
 }

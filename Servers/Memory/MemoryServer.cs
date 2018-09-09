@@ -56,6 +56,12 @@
             //Now accept a connection from the master node
             Socket clientSocket = serverSocket.Accept();
 
+            //Now do a loop
+            while(true)
+            {
+                
+            }
+
         }
     }
 

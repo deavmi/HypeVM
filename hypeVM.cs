@@ -65,8 +65,14 @@ namespace HypeVM.Main
                     //Create a new SlaveManager that will kick off the execution of the respective code
                     SlaveManager slaveManager = new SlaveManager(); //TODO : namespace works as expected
 
+                    //TODO: Remove this for later and then make it rely on config file data
+
+                    string typeOfSlave = args[1];
+                    string ipBind = args[2];
+                    string portBind = args[3];
+
                     //Start the respective code
-                    slaveManager.run();
+                    slaveManager.run(typeOfSlave, ipBind, portBind);
                 }
                 //If the mode provided is not a mode actually
                 else
