@@ -67,6 +67,20 @@ namespace  HypeVM.Master.Clients.Memory
             socket.Connect(endPoint);
 
             //TODO: from here now
+
+            //Now send accross the parameters
+            
+            socket.Send
+
+            loop();
+        }
+
+        private void loop()
+        {
+            while(true)
+            {
+
+            }
         }
 
     }
