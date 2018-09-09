@@ -80,5 +80,6 @@ The instruction set of the HypeMachine is something that will be undergoing many
     * **Name:** Halt
     * **Description:** This instruction halts the machine resulting in it ending execution.
     * **Arguments:** _None_
+2.  TODO: Add more instructions
 
 TODO: Add more instructions.
