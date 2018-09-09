@@ -28,7 +28,18 @@ namespace HypeVM.Slave.Servers.Memory
             //However valid memory sizes are elements of the range [1,32767]
             memory = new byte[size];
 
-            //TODO: Throw error on size==0
+            //TODO: Throw error on size==0 as this symbolises no bytes for memory
+            //TODO: Throw error on size <= 0 as this symbolises no memory or negative which makes no sense (for the latter)
+            
+            //Check if the size given is zero or neggative and then throw an error
+            if(size <= 0)
+            {
+                Console.Out.WriteLine("Size cannot be 0 bytes or negative");
+            }
+            else
+            {
+                Console.Out.WriteLine("Size given is fine");
+            }
         }
 
         //Return the size of this memory in bytes
