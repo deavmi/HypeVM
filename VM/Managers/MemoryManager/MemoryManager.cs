@@ -13,10 +13,23 @@ namespace HypeVM.Master.Memory
     //Manager for the virtual machine's memory
     public sealed class MemoryManager
     {
+
+        //The size of the VM's memory
+        private short memorySize;
+
         //Construct a new MemoryManager with the given MemoryClient and memory size
         public MemoryManager(MemoryClient memoryClient, short memorySize)
         {
             //TODO: Implement me
+
+            //Set the MemoryManager's memorySize
+            this.memorySize = memorySize;
+        }
+
+        //Return's the VM's memory size
+        public short getSize()
+        {
+            return memorySize;
         }
 
         //Set the value (byte) of at an address

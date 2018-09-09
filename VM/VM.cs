@@ -103,6 +103,19 @@ namespace HypeVM.Master.VM
 
             Console.Out.WriteLine("Code loaded into memory size (bytes): " + codeBytes.Length);
 
+            //Now is a good time to check that there are no size overflows
+            //Now we won't have any overflows as we will
+            if(codeBytes.Length > memoryManager.getSize())
+            {
+                //If the byte count is above the size of the VM's memory
+                Console.Out.WriteLine("Limits exceeed, cannot fit a binary image of that size in memory!");
+                return;
+            }
+
+
+
+
+
             //Memory addresses
             short startingAddress = 0; //The starting address for code is at the beginning of memory
             short currentByteAddress = 0; //The current address we are at in memory, will point to the last
