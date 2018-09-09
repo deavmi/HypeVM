@@ -6,8 +6,11 @@ namespace HypeVM.Utils
     //Utilities commonly used
     public sealed class Utils
     {
+
+        //Encode a string of ASCII characters into an array of bytes)
         public static byte[] encodeASCII(string text)
         {
+            //The bytes of the encoded ASCII characters
             List<byte> encodedASCII = new List<byte>();
 
             //The array of characters making up the string `text`
@@ -24,6 +27,8 @@ namespace HypeVM.Utils
                 //Note: We do not support anything but ASCII in HypeVM
                 byte asciiByteCode = (byte)currentCharacter;
 
+                //Add the byte to the array
+                encodedASCII.Add(asciiByteCode);
             }
 
             return encodedASCII.ToArray();
