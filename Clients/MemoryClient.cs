@@ -81,11 +81,13 @@ namespace  HypeVM.Master.Clients.Memory
             loop();
         }
 
+        //The read/write sockect loop
         private void loop()
         {
+            //Now do a loop
             while(true)
             {
-
+                
             }
         }
 
