@@ -14,7 +14,7 @@
      {
 
         //Execute a machine cycle on the given machine
-        public static void cycle(VM vm)
+        public bool cycle(VM vm)
         {
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[Executor]: Machine cycle begin.");
@@ -28,7 +28,16 @@
             short instructionPointerAddress = vm.getRegisters().instructionPointer;
             Console.Out.WriteLine("Current instruction pointer value (an address): " + instructionPointerAddress);
 
+            //TODO: Continue here
 
+            //The OPCode of the instruction
+            byte opCode = 0;
+
+            //Check what instruction it is
+            if(opCode == 0) //Halt instructuction
+            {
+                //Halt the machine when this instruction is encountered
+            }
 
 
             Console.Out.WriteLine("[Executor]: Code execution cycle end.");

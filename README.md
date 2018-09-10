@@ -62,6 +62,18 @@ TODO: Finish description of these
 
 1.  `memSize`
 
+##### State registers
+
+These registers are uesful for determining information regarding the state of the virtual machine. They are listed below.
+
+TODO: Finish description of these
+
+1.  `machineStatus`
+    * **Name:** halted
+    * **Size:** `byte`
+    * **Register ID:** `3`
+    * **Description:** Holds a value that is checked before each machine cycle begins. If the value is `0` then the machine cycle goes ahead, however is the value is not zero then the machine will halt.
+
 ### Devices
 
 Devices can be attatched to the machine to add extra (or much needed) functionality. A dedicated region of memory (an address space) is dedicated to all of the devices. The beginning and end addresses are stored in the special purpose registers `ioStart` and `ioEnd`.
@@ -78,6 +90,7 @@ The instruction set of the HypeMachine is something that will be undergoing many
 
 1.  `halt`
     * **Name:** Halt
+    * **Opcode:** `0`
     * **Description:** This instruction halts the machine resulting in it ending execution.
     * **Arguments:** _None_
 2.  TODO: Add more instructions
