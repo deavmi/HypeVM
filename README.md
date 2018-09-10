@@ -73,6 +73,7 @@ TODO: Finish description of these
     * **Size:** `signed_byte`
     * **Register ID:** `3`
     * **Description:** Holds a value that is checked before each machine cycle begins. If the value is `0` then the machine cycle goes ahead, however is the value is not zero then the machine will halt.
+    **Notes:** The value of this register may soon have more meaning added to it per value hence we recommend that you use the value `1` to halt the machine as it will probably become the value required for such a task and the other non-zero values will have different meanings.
 
 ### Devices
 
@@ -91,7 +92,7 @@ The instruction set of the HypeMachine is something that will be undergoing many
 1.  `halt`
     * **Name:** Halt
     * **Opcode:** `0`
-    * **Description:** This instruction halts the machine resulting in it ending execution.
+    * **Description:** This instruction halts the machine resulting in it ending execution. It does this bye setting the `machineStatus` register to a non-zero value (`1` in this implementation).
     * **Arguments:** _None_
 2.  TODO: Add more instructions
 
