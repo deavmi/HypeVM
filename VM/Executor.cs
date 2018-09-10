@@ -44,14 +44,16 @@ namespace HypeVM.Master.VM
 
             //TODO: Continue here
 
-            //TODO: Fetch the op code, fetch the operands
+            //TODO: Fetch the op code, fetch the operands per each instruction
 
             //The OPCode of the instruction
             byte opCode = 0;
             Console.Out.WriteLine("OPCode is: \"" + opCode + "\"");
 
             //Check what instruction it is
-            if (opCode == 0) //Halt instructuction
+
+            //Halt instructuction
+            if (opCode == 0)
             {
                 //Halt the machine when this instruction is encountered
                 Console.Out.WriteLine("Instruction to halt machine, setting `machineStatus` register to 1");
@@ -60,7 +62,13 @@ namespace HypeVM.Master.VM
                 //non-zero will result in the machine halting
                 vm.getRegisters().machineStatus = 1;
             }
-            else //Invalid op code
+            //Machine reset
+            else if (opCode == 1)
+            {
+                //TODO: Add abilty to reset the machine
+            }
+            //Invalid op code
+            else
             {
                 //Invalid opcode
                 //TODO: Add handling for this
