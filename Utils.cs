@@ -49,6 +49,9 @@ namespace HypeVM.Utils
 
                 //The decoded character
                 char decodedASCIICharacter = (char)currentByte;
+
+                //Append it to the string
+                decodedString = decodedString + decodedASCIICharacter;
             }
 
             return decodedString;
