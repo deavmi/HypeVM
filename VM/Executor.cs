@@ -14,7 +14,7 @@
      {
 
         //Execute a machine cycle on the given machine
-        public bool cycle(VM vm)
+        public static bool cycle(VM vm)
         {
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[Executor]: Machine cycle begin.");
@@ -49,6 +49,12 @@
 
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[Executor]: Machine cycle end.");
+        }
+
+        //Check whether or not the machine must halt
+        private static bool isHalted(VM vm)
+        {
+            return vm.getRegisters().machineStatus != 0;
         }
 
      }

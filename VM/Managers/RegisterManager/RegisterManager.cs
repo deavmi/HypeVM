@@ -43,6 +43,23 @@ namespace HypeVM.Master.Registers
             }
         }
 
+        //The `machineStatus` register
+        public byte machineStatus
+        {
+
+            //Get the value from the RegisterServer
+            get
+            {
+                return (byte)getRegister(3);
+            }
+
+            //Send this to the RegisterServer
+            set
+            {
+                setRegister(value, 3);
+            }
+        }
+
         //The `codeLast` register
         public short codeLast
         {
@@ -94,7 +111,7 @@ namespace HypeVM.Master.Registers
             return 0;
         }
 
-        
+
     }
 
 }

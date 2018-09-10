@@ -70,7 +70,7 @@ TODO: Finish description of these
 
 1.  `machineStatus`
     * **Name:** halted
-    * **Size:** `byte`
+    * **Size:** `signed_byte`
     * **Register ID:** `3`
     * **Description:** Holds a value that is checked before each machine cycle begins. If the value is `0` then the machine cycle goes ahead, however is the value is not zero then the machine will halt.
 
