@@ -47,7 +47,7 @@ namespace HypeVM.Master.VM
             //TODO: Fetch the op code, fetch the operands per each instruction
 
             //The OPCode of the instruction
-            byte opCode = 0;
+            byte opCode = fetchInstruction(instructionPointerAddress);
             Console.Out.WriteLine("OPCode is: \"" + opCode + "\"");
 
             //Check what instruction it is
@@ -87,6 +87,12 @@ namespace HypeVM.Master.VM
 
             //Return true as there was no halting requested
             return true;
+        }
+
+        //Fetch the instruction (op code) at the given address
+        private byte fetchInstruction(short instructionAddress)
+        {
+            //TODO: Implement me
         }
     }
 }
