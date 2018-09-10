@@ -60,9 +60,24 @@ namespace HypeVM.Main
 
             Console.Out.WriteLine(BitConverter.IsLittleEndian); //true (for x86 and x86_64)
             ushort d = BitConverter.ToUInt16(bytes); //This will give me 65
-            Console.Out.WriteLine(d); //65
+            Console.Out.WriteLine("Unsigned short from 2 bytes: " + d); //65
 
+            //Now if we extract the byte from here it would be the first byte
+            byte firstByteOfShort = (byte)d; //65
+            Console.Out.WriteLine("FirstByteOfShort: " + firstByteOfShort); //65
+
+            //If we have ushort
+            ushort test1 = 65535; //16 1 bits
+            short test2 = (short)test1; //Now this means that it will be -1
+            Console.Out.WriteLine("Signed short from highest unsigned short: " + test2); //-1
+
+            int test3 = test1; //We are copying the value 65535 into an integer which can represent
+            //the unsigned value of 65535 as UNSIGNED
+            int test4 = test2; //We are coying the signed value -1 into an integer which can represent
+            //the signed value of -1 as SIGNED
             
+            Console.Out.WriteLine("test3: " + test3); //65535
+            Console.Out.WriteLine("test4: " + test4); //-1
 
             return;
 
