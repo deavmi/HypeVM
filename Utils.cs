@@ -41,6 +41,16 @@ namespace HypeVM.Utils
 
             //TODO: Implement me
 
+            //Loop through the array of bytes and create ASCII character mapping per each byte
+            for(int byteIndex = 0; byteIndex < asciiBytes.Length; byteIndex++)
+            {
+                //The current byte
+                byte currentByte = asciiBytes[byteIndex];
+
+                //The decoded character
+                char decodedASCIICharacter = (char)currentByte;
+            }
+
             return decodedString;
         }
     }

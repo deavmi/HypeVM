@@ -19,6 +19,53 @@ namespace HypeVM.Main
         {
             Console.Out.WriteLine("Welcome to hypeVM!");
 
+            //This is UTF 16 and hence with this encoding
+            //It encodes characters with 1 16bit cde unit
+            //a.k.a. 2 bytes. Hence two characters here is 2bytes*2=4
+            Console.Out.WriteLine(new System.Text.UnicodeEncoding().GetByteCount("aA"));
+
+            //Let's try UTF-8 (the widely used encoding scheme)
+            //UTF 8 should say 1 byte for this
+            //unlike 16-bit utf 16 which is fixed length in the case of ASCII characters
+            //UTF 8 will be from 1 to 4 bytes but the ASCII characters are 1 bytes
+            Console.Out.WriteLine(new System.Text.UTF8Encoding().GetByteCount("a"));
+
+            //Ah I see it is a 16 bit charwe are using.
+            //Just discovered it in the `Char` struct
+            char g;
+
+            //More testing
+            System.Text.UnicodeEncoding j = new System.Text.UnicodeEncoding();
+
+            //We provide it the neede two bytes which UTF-16 uses to encode characters
+            byte[] bytes = new byte[2];
+
+            //We now encode the character 'A'
+            int byteCount = j.GetEncoder().GetBytes(new char[] { 'A' }, 0, 1, bytes, 0, false);
+
+            Console.Out.WriteLine("Got bytes: " + byteCount); //2
+            Console.Out.WriteLine(bytes[0] + " " + bytes[1]); //65 and 0
+
+            //More testing
+            j = new System.Text.UnicodeEncoding(false, false);
+
+            //We provide it the neede two bytes which UTF-16 uses to encode characters
+            bytes = new byte[2];
+
+            //We now encode the character 'A'
+            byteCount = j.GetEncoder().GetBytes(new char[] { 'A' }, 0, 1, bytes, 0, false);
+
+            Console.Out.WriteLine("Got bytes: " + byteCount); //2
+            Console.Out.WriteLine(bytes[0] + " " + bytes[1]); //65 and 0
+
+            Console.Out.WriteLine(BitConverter.IsLittleEndian); //true (for x86 and x86_64)
+            ushort d = BitConverter.ToUInt16(bytes); //This will give me 65
+            Console.Out.WriteLine(d); //65
+
+            
+
+            return;
+
             //Check whether any arguments were provided
             if (args.Length > 0)
             {
