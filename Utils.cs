@@ -37,9 +37,8 @@ namespace HypeVM.Utils
         //Decode an array of bytes into a string og ASCII characters
         public string decodeASCI(byte[] asciiBytes)
         {
+            //The newly created string from the decoded ASCII bytes
             string decodedString = "";
-
-            //TODO: Implement me
 
             //Loop through the array of bytes and create ASCII character mapping per each byte
             for(int byteIndex = 0; byteIndex < asciiBytes.Length; byteIndex++)
