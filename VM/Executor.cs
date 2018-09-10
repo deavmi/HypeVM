@@ -90,9 +90,13 @@ namespace HypeVM.Master.VM
         }
 
         //Fetch the instruction (op code) at the given address
-        private byte fetchInstruction(short instructionAddress)
+        private byte fetchInstruction(VM vm, short instructionAddress)
         {
             //TODO: Implement me
+            byte opCode = vm.getMemory().getByte();
+
+
+            return opCode;
         }
     }
 }
