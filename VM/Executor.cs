@@ -5,13 +5,13 @@
  *
  */
 
- namespace HypeVM.Master.VM
- {
+namespace HypeVM.Master.VM
+{
 
-     using System;
+    using System;
 
-     public sealed class Executor
-     {
+    public sealed class Executor
+    {
 
         //Execute a machine cycle on the given machine
         public static bool cycle(VM vm)
@@ -19,24 +19,51 @@
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[Executor]: Machine cycle begin.");
 
+            //Check the value of the `machineStatus` register
+            byte machineStatus = vm.getRegisters().machineStatus;
+            Console.Out.WriteLine("Machine status register is \"" + machineStatus);
+
+            if (machineStatus == 0)
+            {
+                //Do nothing
+            }
+            else
+            {
+                //So far the implementation for this is to halt the machine if a non-zero value is placed in the `machineStatus` register
+                return false;
+            }
+
             //TODO: Implement me
             //1. Add exeuction and management of code
             Console.Out.WriteLine("[Executor]: Code execution cycle begin.");
-            
-            
+
+
             //TODO: Implement me (The execution of the machine code)
             short instructionPointerAddress = vm.getRegisters().instructionPointer;
             Console.Out.WriteLine("Current instruction pointer value (an address): " + instructionPointerAddress);
 
             //TODO: Continue here
 
+            //TODO: Fetch the op code, fetch the operands
+
             //The OPCode of the instruction
             byte opCode = 0;
+            Console.Out.WriteLine("OPCode is: \"" + opCode + "\"");
 
             //Check what instruction it is
-            if(opCode == 0) //Halt instructuction
+            if (opCode == 0) //Halt instructuction
             {
                 //Halt the machine when this instruction is encountered
+                Console.Out.WriteLine("Instruction to halt machine, setting `machineStatus` register to 1");
+
+                //Set the `machineStatus` register to a non-zero value so that when the next machine cycle begins the check for it to be
+                //non-zero will result in the machine halting
+                vm.getRegisters().machineStatus = 1;
+            }
+            else //Invalid op code
+            {
+                //Invalid opcode
+                //TODO: Add handling for this
             }
 
 
@@ -49,13 +76,9 @@
 
             //Output information (TODO: Finish me)
             Console.Out.WriteLine("[Executor]: Machine cycle end.");
-        }
 
-        //Check whether or not the machine must halt
-        private static bool isHalted(VM vm)
-        {
-            return vm.getRegisters().machineStatus != 0;
+            //Return true as there was no halting requested
+            return true;
         }
-
-     }
- }
+    }
+}
